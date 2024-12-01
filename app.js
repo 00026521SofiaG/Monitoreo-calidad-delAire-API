@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require("cors");
 
 const mongoose = require("./config/mongoose");
 
@@ -12,6 +13,9 @@ const apiRouter = require("./routes/api/index.router");
 
 
 var app = express();
+
+app.use(cors());
+
 mongoose.connect();
 
 app.use(logger('dev'));

@@ -3,9 +3,10 @@ const debug = require("debug")("app:mongoose");
 
 const dbhost = process.env.DBHOST || "localhost";
 const dbport = process.env.DBPORT || "27017";
-const dbname = process.env.DBNAME || "DATOS-DB";
+const dbname = process.env.DBNAME || "airecalidad";
 
-const dbUri = 'mongodb+srv://sofia:aryefactos1@calidadaire.agoaz.mongodb.net/' || `mongodb://${dbhost}:${dbport}/${dbname}`;
+const dbUri = 'mongodb+srv://sofia:artefactos1@airecalidad.8cat3.mongodb.net/';
+
 
 const connect = async () =>{
     debug(dbUri);

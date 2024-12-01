@@ -2,10 +2,12 @@ const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 
 const tempSchema = new Schema({
-    Temperatura: {
-        type: String
+    temperatura:{
+        type: String,
+        require: true,
     }
+    }, {timestamps: true}
     
-})
+);
 
 module.exports = Mongoose.model("Temperatura", tempSchema);
